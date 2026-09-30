@@ -1,0 +1,331 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+    min-height: 100vh;
+}
+
+/* Header */
+
+header {
+    background: #111827;
+    color: white;
+    padding: 25px 8%;
+}
+
+header h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+header p {
+    color: #d1d5db;
+}
+
+
+/* Main Navigation Page */
+
+.navigation-container {
+    width: 90%;
+    max-width: 900px;
+    margin: 35px auto;
+}
+
+.location-box {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.location-box p {
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.location-box h2 {
+    font-size: 20px;
+}
+
+
+/* Destination Section */
+
+.destination-section {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.destination-section h2 {
+    margin-bottom: 20px;
+}
+
+#searchBox {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+
+/* Destination Buttons */
+
+.destination-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.destination-buttons button {
+    padding: 18px;
+    background: #f1f5f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.destination-buttons button:hover {
+    background: #e2e8f0;
+    transform: translateY(-2px);
+}
+
+
+/* Selected Destination */
+
+.selected-destination {
+    margin-top: 25px;
+    padding: 15px;
+    background: #f8fafc;
+    border-radius: 8px;
+}
+
+.selected-destination p {
+    color: #666;
+    font-size: 14px;
+}
+
+.selected-destination h3 {
+    margin-top: 5px;
+}
+
+
+/* Buttons */
+
+.directions-button,
+.start-button,
+.cancel-button {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.directions-button {
+    margin-top: 20px;
+    background: #2563eb;
+    color: white;
+}
+
+.directions-button:hover {
+    background: #1d4ed8;
+}
+
+
+/* Directions Page */
+
+.directions-container {
+    width: 90%;
+    max-width: 900px;
+    margin: 35px auto;
+}
+
+.destination-info {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.destination-info p:first-child {
+    color: #666;
+}
+
+.destination-info h2 {
+    margin: 8px 0;
+}
+
+.distance,
+.walking-time {
+    margin-top: 8px;
+    color: #555;
+}
+
+
+/* Map */
+
+.map {
+    height: 400px;
+    background: #dbe4d8;
+    border: 4px solid white;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Map roads */
+
+.map::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 70px;
+    background: #ffffff;
+    top: 150px;
+    left: -50px;
+    transform: rotate(-15deg);
+}
+
+.map::after {
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 120%;
+    background: #ffffff;
+    left: 50%;
+    top: -50px;
+    transform: rotate(20deg);
+}
+
+
+/* Map labels */
+
+.map-label {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: white;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-weight: bold;
+    z-index: 2;
+}
+
+
+/* Current Location */
+
+.current-location {
+    position: absolute;
+    left: 18%;
+    top: 65%;
+    z-index: 3;
+    font-size: 30px;
+}
+
+.current-location span,
+.destination-marker span {
+    display: block;
+    font-size: 13px;
+    background: white;
+    padding: 5px 8px;
+    border-radius: 5px;
+}
+
+
+/* Route */
+
+.route-line {
+    position: absolute;
+    width: 45%;
+    height: 6px;
+    background: #2563eb;
+    left: 25%;
+    top: 55%;
+    transform: rotate(-25deg);
+    z-index: 2;
+}
+
+
+/* Destination */
+
+.destination-marker {
+    position: absolute;
+    right: 18%;
+    top: 25%;
+    z-index: 3;
+    font-size: 30px;
+}
+
+
+/* Navigation Controls */
+
+.navigation-controls {
+    margin-top: 25px;
+}
+
+.start-button {
+    background: #16a34a;
+    color: white;
+    margin-bottom: 12px;
+}
+
+.start-button:hover {
+    background: #15803d;
+}
+
+.cancel-button {
+    background: #e5e7eb;
+    color: #222;
+}
+
+.cancel-button:hover {
+    background: #d1d5db;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    .navigation-container,
+    .directions-container {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    .destination-section {
+        padding: 20px;
+    }
+
+    .destination-buttons {
+        grid-template-columns: 1fr;
+    }
+
+    .map {
+        height: 320px;
+    }
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airport Directions</title>
+    <link rel="stylesheet" href="stylesheet/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Airport Navigation</h1>
+        <p>Your route to your destination</p>
+    </header>
+
+    <main class="directions-container">
+
+        <section class="destination-info">
+
+            <p>Destination</p>
+
+            <h2 id="destinationName">
+                Gate B12
+            </h2>
+
+            <p class="distance">
+                📍 250 metres away
+            </p>
+
+            <p class="walking-time">
+                🚶 Approximately 3 minutes
+            </p>
+
+        </section>
+
+
+        <section class="map">
+
+            <div class="map-label terminal">
+                Terminal 1
+            </div>
+
+            <div class="current-location">
+                📍
+                <span>Your Location</span>
+            </div>
+
+            <div class="route-line"></div>
+
+            <div class="destination-marker">
+                📌
+                <span>Gate B12</span>
+            </div>
+
+        </section>
+
+
+        <section class="navigation-controls">
+
+            <button class="start-button" onclick="startNavigation()">
+                START NAVIGATION
+            </button>
+
+            <button class="cancel-button" onclick="cancelNavigation()">
+                CANCEL
+            </button>
+
+        </section>
+
+    </main>
+
+    <script src="javascript/script.js"></script>
+
+</body>
+</html>

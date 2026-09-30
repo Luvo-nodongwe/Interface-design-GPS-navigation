@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airport Navigation</title>
+    <link rel="stylesheet" href="stylesheet/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Airport Navigation</h1>
+        <p>Find your way around the airport</p>
+    </header>
+
+    <main class="navigation-container">
+
+        <section class="location-box">
+            <p>Current Location</p>
+            <h2>📍 Terminal 1</h2>
+        </section>
+
+        <section class="destination-section">
+
+            <h2>Where do you want to go?</h2>
+
+            <input type="text" id="searchBox" placeholder="🔍 Search airport location...">
+
+            <div class="destination-buttons">
+
+                <button onclick="selectDestination('Boarding Gates')">
+                    ✈️ Boarding Gates
+                </button>
+
+                <button onclick="selectDestination('Restaurants')">
+                    🍴 Restaurants
+                </button>
+
+                <button onclick="selectDestination('Restrooms')">
+                    🚻 Restrooms
+                </button>
+
+                <button onclick="selectDestination('Shops')">
+                    🛍️ Shops
+                </button>
+
+                <button onclick="selectDestination('Medical Services')">
+                    🏥 Medical Services
+                </button>
+
+                <button onclick="selectDestination('Cafés')">
+                    ☕ Cafés
+                </button>
+
+            </div>
+
+            <div class="selected-destination">
+                <p>Selected Destination</p>
+                <h3 id="selectedDestination">No destination selected</h3>
+            </div>
+
+            <button class="directions-button" onclick="getDirections()">
+                GET DIRECTIONS
+            </button>
+
+        </section>
+
+    </main>
+
+    <script src="javascript/script.js"></script>
+
+</body>
+</html>
