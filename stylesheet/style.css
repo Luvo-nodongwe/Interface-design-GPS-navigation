@@ -329,3 +329,63 @@ header p {
         height: 320px;
     }
 }
+
+/* Navigation Bar */
+
+header {
+    background: #111827;
+    color: white;
+    padding: 0;
+}
+
+.nav-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    min-height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo h1 {
+    font-size: 22px;
+}
+
+nav {
+    display: flex;
+    gap: 8px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 15px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    background: #374151;
+}
+
+nav a.active {
+    background: #2563eb;
+}
+
+.page-title {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 0 25px;
+}
+
+.page-title h2 {
+    font-size: 26px;
+    margin-bottom: 5px;
+}
+
+.page-title p {
+    color: #d1d5db;
+}
